@@ -1,5 +1,4 @@
 import '../repository/api.dart';
-import 'dart:convert';
 
 class CaractersModel {
   CaractersModel(
