@@ -1,11 +1,12 @@
-import 'package:dio/dio.dart';
+import 'dart:convert';
+
+import 'package:http/http.dart' as http;
+import 'package:my_cards/models/caracters_module.dart';
 
 class Api {
-  final Dio dio = Dio();
+  var urlCaracters = Uri.https("https://rickandmortyapi.com/api", "/character");
 
-  characters() async {
-    Response response =
-        await dio.get("https://rickandmortyapi.com/api/character");
-    return response.data;
+  Future getCharacters() async {
+    final response = await http.get(urlCaracters);
   }
 }

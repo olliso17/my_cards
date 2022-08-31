@@ -5,14 +5,19 @@ import '../repository/api.dart';
 
 class HomePage extends StatefulWidget {
   HomePage({Key? key}) : super(key: key);
-  var bloc = Bloc();
-  List list =[] ;
+
   @override
   State<HomePage> createState() => _HomePageState();
 }
 
 class _HomePageState extends State<HomePage> {
+  Api api = Api();
   @override
+    initState() {
+     
+      super.initState();
+       print('api:$api');
+    }
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: const Text('Card')),
