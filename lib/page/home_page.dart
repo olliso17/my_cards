@@ -12,18 +12,15 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   Api api = Api();
+  CaractersModel caractersModel = CaractersModel();
   @override
-    initState() {
-     
-      super.initState();
-       print('api:$api');
-    }
+  initState() {
+    super.initState();
+    // print();
+  }
+
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Card')),
-      body: Container(
-        child: ListView.builder(itemBuilder: ),
-      ),
-    );
+        appBar: AppBar(title: const Text('Card')), body: Container());
   }
 }
