@@ -7,8 +7,10 @@ import 'package:my_cards/page/home_page.dart';
 import 'package:my_cards/repository/api.dart';
 
 void main() {
-  Bloc _bloc = Bloc();
-  _bloc.caracterBloc();
+  // Bloc _bloc = Bloc();
+  // _bloc.caracterBloc();
+  Api api = Api();
+  api.getCharacters();
 }
 
 class MyApp extends StatelessWidget {

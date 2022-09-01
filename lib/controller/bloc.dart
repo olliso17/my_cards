@@ -6,8 +6,7 @@ class Bloc extends BlocBase {
   CaractersModel caractersModel = CaractersModel();
 
   void caracterBloc() {
-    // var caracters = caractersModel.results;x
-    // List<CaractersModel> list = [];
+    // List<CaractersModel> listResults = caractersModel.map((e)=>e).toList();
 
     // print(caracters);
   }
