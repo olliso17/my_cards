@@ -11,12 +11,9 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  Api api = Api();
-  CaractersModel caractersModel = CaractersModel();
   @override
   initState() {
     super.initState();
-    // print();
   }
 
   Widget build(BuildContext context) {

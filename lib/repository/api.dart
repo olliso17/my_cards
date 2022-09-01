@@ -6,11 +6,13 @@ import 'package:my_cards/models/caracters_module.dart';
 class Api {
   var urlCaracters = 'https://rickandmortyapi.com/api/character';
 
-  Future getCharacters() async {
+  Future<CaractersModel> getCharacters() async {
     final response = await http.get(Uri.parse(urlCaracters));
     if (response.statusCode == 200) {
-      List jsonResponse = jsonDecode(response.body);
-      return jsonResponse.map((e) => CaractersModel.fromJson(e)).toList();
+      Map<String, dynamic> jsonResponse =
+          Map<String, dynamic>.from(json.decode((response.body)));
+      var caracters = CaractersModel.fromJson(jsonResponse);
+      return caracters;
     } else {
       throw Exception('Caracteres falharam');
     }

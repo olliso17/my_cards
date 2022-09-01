@@ -1,10 +1,14 @@
+import 'package:my_cards/repository/api.dart';
+
 class CaractersModel {
   CaractersModel(
-      {this.info,
-      /*this.count, this.pages, this.next, this.prev,*/ this.results});
+      {this.id,
+      /*
+      this.count, this.pages, this.next, this.prev,*/
+      this.results});
 
-  final List? info;
-  // final int? count;
+  // final List? info;
+  final int? id;
   // final int? pages;
   // final String? next;
   // final String? prev;
@@ -12,7 +16,7 @@ class CaractersModel {
 
   factory CaractersModel.fromJson(Map<String, dynamic> parsedJson) =>
       CaractersModel(
-        info: parsedJson['info'],
+        id: parsedJson['id'],
         // count: parsedJson['count'],
         // pages: parsedJson['pages'],
         // next: parsedJson['next'],
@@ -21,7 +25,7 @@ class CaractersModel {
       );
 
   Map<String, dynamic> toJson() => {
-        "info": info,
+        "id": id,
         // "count": count,
         // "pages": pages,
         // "next": next,
